@@ -2,7 +2,7 @@ var notesApp = notesApp || {}  // namespace to prevent global variables
 
 notesApp.selectedNote = 0  // keeps track of which note we are editing
 
-notesApp.getAll = async () => {
+notesApp.getAll = async () => { 
     const response = await fetch('http://localhost:8084/notes?action=getAll')
     const notes = await response.json()
     console.log(notes)
